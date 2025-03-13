@@ -11,13 +11,18 @@
     font-weight: normal;
 }
 
+:root{
+    --vioL:#7104ff;
+}
+
+
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
 }
 
 body{
-    background-color: #fff0ff;
+    background-color: #eee2ff;
 }
 
 .piller
@@ -45,7 +50,8 @@ body{
 
 
 .container nav{
-    background: linear-gradient(to right, #ff5e2d, #ff4b04);
+    /* background: linear-gradient(to right, #a513ff, #7104ff); */
+    background-color: var(--vioL);
     min-height: 80px;
     height: 80px;
     width: 100%;
@@ -148,10 +154,10 @@ body{
 }
 .container .webFullCover .covers .titleLines{
     font-size: 45px;
-    color:  #ff4b04;
+    color:  var(--vioL);
 }
 .container .webFullCover .covers .smallLines{
-    color: gray;
+    color: rgb(55, 55, 55);
     font-size: 20px;
 }
 .container .webFullCover .covers .descLines{
@@ -193,16 +199,16 @@ body{
     height: 400px;
     width: 400px;
     object-fit: contain;
-    border-bottom: 10px solid #ff4b04;
+    border-bottom: 10px solid var(--vioL);
     background-color: rgb(255, 255, 255);
     border-radius: 30px;
-    animation: imageBgChange 10s normal infinite;
+    animation: imageBgChange 10s infinite ease-in-out;
     /* border-left: 10px dashed rgb(255, 255, 255); */
 }
 
 @keyframes imageBgChange {
     30%{
-        background-color: orange;
+        background-color: white;
     }
     60%{
         background-color:transparent;
@@ -265,7 +271,7 @@ body{
     font-size: 15px;
     text-align: center;
     position: relative;
-    box-shadow: 1px 1px 5px 1px rgb(222, 233, 255);
+    box-shadow: 1px 1px 5px 1px rgb(249, 247, 255);
 }
 
 
@@ -285,7 +291,7 @@ body{
 }
 .bodyDesc .experticeFulDiv .title{
     font-size: 15px;
-    color: #ff5c31;
+    color: var(--vioL);
 }
 
 
@@ -294,7 +300,7 @@ body{
 .bodyDesc .picsAndSomeTalks{
     width: 100%;
     margin-top: 100px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
@@ -316,7 +322,7 @@ body{
     width: 200px;
     height: 150px;
     position: absolute;
-    border: 5px solid rgb(133, 133, 133);
+    border: 5px solid rgb(255, 255, 255);
     top: 15%;
     left: 5%;
 }
@@ -341,7 +347,8 @@ body{
     text-align: center;
     margin-bottom: 100px;
     font-size: 13px;
-    color: rgb(127, 127, 127);
+    color: var(--vioL);
+    color: rgb(215, 6, 93);
 
 }
 
@@ -361,8 +368,9 @@ body{
     display: flex;
     justify-content: center;
     gap: 10px;
-    background-color: rgb(255, 132, 0);
-    background: linear-gradient(#ff792e, #e74300);
+
+    background: var(--vioL);
+
 }
 
 .footerFullDiv .iconsAndContacts{
@@ -374,6 +382,7 @@ body{
     align-items: start;
     justify-content: center;
     flex-direction: column;
+    color: white;
 
 }
 
@@ -409,6 +418,7 @@ body{
 .footerFullDiv .profileAndOthers p{
     width: 110px;
     text-align: center;
+    color: white;
 }
 
 
@@ -472,19 +482,21 @@ body{
         bottom: 0;
         right: 0;
         width: 300px;
-        background-color: rgb(255, 154, 3);
+        background-color: var(--vioL);
+        background-color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         transition: 0.5s;
 
-
     }
 
     .container nav .navbar .navlinks .links{
         user-select: text;
         text-decoration: none;
+        color: black;
+        margin-top: 30px;
     }
     .container nav .navbar .toggle{
         display: flex;

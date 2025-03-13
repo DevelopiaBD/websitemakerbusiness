@@ -11,13 +11,18 @@
     font-weight: normal;
 }
 
+:root{
+    --vioL:hsl(210, 100%, 57%);
+}
+
+
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
 }
 
 body{
-    background-color: #fff0ff;
+    background-color: #001a3b;
 }
 
 .piller
@@ -45,7 +50,8 @@ body{
 
 
 .container nav{
-    background: linear-gradient(to right, #ff5e2d, #ff4b04);
+    /* background: linear-gradient(to right, #a513ff, #7104ff); */
+    background-color: var(--vioL);
     min-height: 80px;
     height: 80px;
     width: 100%;
@@ -148,10 +154,10 @@ body{
 }
 .container .webFullCover .covers .titleLines{
     font-size: 45px;
-    color:  #ff4b04;
+    color:  var(--vioL);
 }
 .container .webFullCover .covers .smallLines{
-    color: gray;
+    color: rgb(255, 254, 254);
     font-size: 20px;
 }
 .container .webFullCover .covers .descLines{
@@ -193,16 +199,16 @@ body{
     height: 400px;
     width: 400px;
     object-fit: contain;
-    border-bottom: 10px solid #ff4b04;
+    border-bottom: 10px solid var(--vioL);
     background-color: rgb(255, 255, 255);
     border-radius: 30px;
-    animation: imageBgChange 10s normal infinite;
+    animation: imageBgChange 10s infinite ease-in-out;
     /* border-left: 10px dashed rgb(255, 255, 255); */
 }
 
 @keyframes imageBgChange {
     30%{
-        background-color: orange;
+        background-color: white;
     }
     60%{
         background-color:transparent;
@@ -223,11 +229,11 @@ body{
 /*  bodyDesc             */
 .container .bodyDesc{
     min-height: 700px;
+    /* margin-top: 100px; */
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: rgb(255, 208, 176); */
 }
 
 .container .bodyDesc .experticeFulDiv{
@@ -236,12 +242,20 @@ body{
     align-items: center;
     gap: 5px;
     width: 100%;
-    /* margin-top: 100px; */
 }
 
 .container .bodyDesc .experticeFulDiv .mainSubTitle{
-    color: gray;
+    color: rgb(255, 255, 255);
 }
+
+
+
+
+.bodyDesc .experticeFulDiv h2{
+    color: var(--vioL);
+}
+
+
 
 .bodyDesc .experticeFulDiv .experticemainDiv{
     display: flex;
@@ -250,9 +264,11 @@ body{
     gap: 30px;
     margin-top: 30px;
     width: 100%;
+    color: #95e1ff;
+
 }
 
-.bodyDesc .experticeFulDiv .expertice1div{
+.bodyDesc .experticeFulDiv .experticemainDiv .expertice1div{
     height: 300px;
     min-width: 200px;
     max-width: 300px;
@@ -262,11 +278,40 @@ body{
     align-items: center;
     gap: 10px;
     padding: 10px;
-    font-size: 15px;
     text-align: center;
     position: relative;
-    box-shadow: 1px 1px 5px 1px rgb(222, 233, 255);
+    border: 1px solid var(--vioL);
+    border-radius: 30%;
+    padding: 20px;
+    transition: 0.5s;
+    /* box-shadow: 1px 1px 1px 4px var(--vioL); */
 }
+
+
+
+
+
+
+.bodyDesc .experticeFulDiv .expertice1div:hover{
+    background-color: var(--vioL);
+    border-radius: 30%;
+}
+
+.bodyDesc .experticeFulDiv img{
+    height: 50px;
+    width: 50px;
+    transition: .3s;
+    filter: invert();
+
+}
+
+
+
+.bodyDesc .experticeFulDiv .expertice1div:hover img{
+    height: 35px;
+    width: 35px;
+}
+
 
 
 /* .bodyDesc .experticeFulDiv .expertice1div::before{
@@ -279,14 +324,41 @@ body{
 } */
 
 
-.bodyDesc .experticeFulDiv img{
-    height: 50px;
-    width: 50px;
+
+
+
+.bodyDesc .experticeFulDiv .expertice1div .title{
+    font-size: 25px;
+    color: var(--vioL);
+    transition: 0.3s;
 }
-.bodyDesc .experticeFulDiv .title{
-    font-size: 15px;
-    color: #ff5c31;
+
+
+.bodyDesc .experticeFulDiv .expertice1div:hover .title{
+    color: white;
+    font-size: 10px;
 }
+
+
+.bodyDesc .experticeFulDiv .expertice1div .descExp{
+   font-size: 13px;
+   transition: 0.1s;
+   opacity: 0.5;
+}
+.bodyDesc .experticeFulDiv .expertice1div:hover .descExp{
+    opacity: 1;
+    color: black;
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -294,11 +366,12 @@ body{
 .bodyDesc .picsAndSomeTalks{
     width: 100%;
     margin-top: 100px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
+    
 }
 
 
@@ -306,9 +379,7 @@ body{
     position: relative;
     width: 300px;
     height: 400px;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+
 }
 
 .bodyDesc .picsAndSomeTalks .picsDiv img{
@@ -316,7 +387,7 @@ body{
     width: 200px;
     height: 150px;
     position: absolute;
-    border: 5px solid rgb(133, 133, 133);
+    border: 5px solid rgb(255, 255, 255);
     top: 15%;
     left: 5%;
 }
@@ -341,13 +412,13 @@ body{
     text-align: center;
     margin-bottom: 100px;
     font-size: 13px;
-    color: rgb(127, 127, 127);
+    color: rgb(187, 191, 255);
 
 }
 
 .bodyDesc .picsAndSomeTalks .talksDiv .title{
     font-size: 25px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -361,8 +432,9 @@ body{
     display: flex;
     justify-content: center;
     gap: 10px;
-    background-color: rgb(255, 132, 0);
-    background: linear-gradient(#ff792e, #e74300);
+
+    background: linear-gradient(rgb(60, 109, 255), var(--vioL) ) ;
+
 }
 
 .footerFullDiv .iconsAndContacts{
@@ -374,6 +446,7 @@ body{
     align-items: start;
     justify-content: center;
     flex-direction: column;
+    color: white;
 
 }
 
@@ -409,6 +482,7 @@ body{
 .footerFullDiv .profileAndOthers p{
     width: 110px;
     text-align: center;
+    color: white;
 }
 
 
@@ -472,19 +546,21 @@ body{
         bottom: 0;
         right: 0;
         width: 300px;
-        background-color: rgb(255, 154, 3);
+        background-color: var(--vioL);
+        background-color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         transition: 0.5s;
 
-
     }
 
     .container nav .navbar .navlinks .links{
         user-select: text;
         text-decoration: none;
+        color: black;
+        margin-top: 30px;
     }
     .container nav .navbar .toggle{
         display: flex;
@@ -565,46 +641,97 @@ body{
 
 
 @media screen and (max-width:700px){
-    .bodyDesc .experticeFulDiv .expertice1div{
-        height: 200px;
-        width: 200px;
-        font-size: 10px;
-    }
+    
+.bodyDesc .experticeFulDiv .experticemainDiv .expertice1div{
+    height: 200px;
+    min-width: 100px;
+    max-width: 200px;
+}    
+
+.bodyDesc .experticeFulDiv img{
+    height: 30px;
+    width: 30px;
+    transition: .3s;
+    filter: invert();
+
 }
+
+
+
+.bodyDesc .experticeFulDiv .expertice1div:hover img{
+    height: 25px;
+    width: 25px;
+}
+
+
+
+.bodyDesc .experticeFulDiv .expertice1div .title{
+    font-size: 12px;
+    color: var(--vioL);
+    transition: 0.3s;
+}
+
+
+.bodyDesc .experticeFulDiv .expertice1div:hover .title{
+    color: white;
+    font-size: 10px;
+}
+
+
+.bodyDesc .experticeFulDiv .expertice1div .descExp{
+   font-size: 10px;
+   transition: 0.1s;
+   opacity: 0.5;
+}
+.bodyDesc .experticeFulDiv .expertice1div:hover .descExp{
+    opacity: 1;
+    color: black;
+    font-size: 13px;
+}
+
+
+
+
+
+}
+
+
+
+
 
 @media screen and (max-width:500px){
+  
+    .footerFullDiv{
+        flex-wrap: wrap;
+
+    }
     
-.footerFullDiv{
-    flex-wrap: wrap;
-    margin-top:0px;
-}
-
-.footerFullDiv .iconsAndContacts{
-    display: flex;
-    height: 300px;
-    min-width: 100%;
-    gap: 8px;
-    text-align: center;
-
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-
-
-
-.footerFullDiv .profileAndOthers{
-    min-width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
+    .footerFullDiv .iconsAndContacts{
+        display: flex;
+        height: 300px;
+        min-width: 100%;
+        gap: 8px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+    }
+    
+    
+    
+    
+    .footerFullDiv .profileAndOthers{
+        min-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
 
 
 }
@@ -620,28 +747,27 @@ body{
 
 
 
-
 @media screen and (max-width:320px) {
     
-    .bodyDesc .picsAndSomeTalks .picsDiv img{
-        transform: scale(0.9);
-    }
-    .bodyDesc .picsAndSomeTalks .picsDiv img:nth-child(3){
-        left: 30%;
-    }
-       
-    }
+.bodyDesc .picsAndSomeTalks .picsDiv img{
+    transform: scale(0.9);
+}
+.bodyDesc .picsAndSomeTalks .picsDiv img:nth-child(3){
+    left: 30%;
+}
+   
+}
+
+
+
+@media screen and (max-width:255px) {
     
-    
-    
-    @media screen and (max-width:255px) {
-        
-    .bodyDesc .picsAndSomeTalks .picsDiv{
-        transform: scale(0.5);
-    }
-    .bodyDesc .picsAndSomeTalks .picsDiv img:nth-child(3){
-        left: 30%;
-        transform: scale(0.7);
-    }
-       
-    }
+.bodyDesc .picsAndSomeTalks .picsDiv{
+    transform: scale(0.5);
+}
+.bodyDesc .picsAndSomeTalks .picsDiv img:nth-child(3){
+    left: 30%;
+    transform: scale(0.7);
+}
+   
+}
