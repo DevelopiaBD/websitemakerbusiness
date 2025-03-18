@@ -682,3 +682,17 @@ body{
     }
        
     }
+    
+    
+    @media screen and (max-height:500px) {
+        
+    .container nav .navbar .navlinks{
+        justify-content: start;
+        /* background-color: red; */
+        overflow-y: auto;
+    }
+    .container nav .navbar .navlinks::-webkit-scrollbar{
+        display: none;
+    }
+       
+    }

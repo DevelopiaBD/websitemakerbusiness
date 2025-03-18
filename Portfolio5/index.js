@@ -1,6 +1,11 @@
 const toggle = document.querySelector(".toggle");
 const navlinks = document.querySelector(".navlinks");
 const links = document.querySelectorAll(".links");
+const imageSampleCover = document.querySelectorAll(".imageSampleCover");
+
+console.log(imageSampleCover);
+
+
 
 toggle.addEventListener("click", ()=>{
     navlinks.classList.toggle("active");
@@ -39,3 +44,11 @@ links.forEach(link=>{
 // console.log(text.length);
 // console.log(text.trim().substring(0, 4));
 
+const imagesAllDiv = document.querySelector(".imagesAllDiv")
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    imageSampleCover.forEach((image, i)=>{        
+        image.setAttribute("data-ride", i);
+        // imagesAllDiv.style.transform=`translateX(${i* -100}%)`
+    })
+})
