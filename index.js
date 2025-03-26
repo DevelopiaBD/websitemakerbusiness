@@ -51,4 +51,48 @@ document.addEventListener("DOMContentLoaded", ()=>{
         image.setAttribute("data-ride", i);
         // imagesAllDiv.style.transform=`translateX(${i* -100}%)`
     })
+});
+
+const abb = document.querySelector(".aboutOurTrust");
+
+
+
+const pointDivAll = document.querySelectorAll(".pointDiv");
+pointDivAll.forEach((ponits, i)=>{
+    ponits.setAttribute("data-ride", i);
+
 })
+
+
+
+window.addEventListener("scroll", ()=>{
+
+    console.log(abb.scrollHeight);
+    const a = window.scrollY;
+    const b = abb.scrollHeight;
+
+    if(a===b){alert("Yes")}
+
+    console.log(a-b === window.screen.availHeight);
+    
+    
+    pointDivAll.forEach((points, i)=>{
+
+        const ab = points.getAttribute("data-ride");
+
+            if((a-b) < window.screen.availHeight - 100){
+
+            }
+     
+    })
+    
+    console.log(window.screen.height < 300);
+    console.log(window.scrollY)
+    console.log("avaivlae Avaivalbe Height "+ window.screen.availHeight)
+    console.log("avaivlae Height "+ window.scrollY)
+    console.log(a-b);
+        // document.querySelector("body").style.backgroundColor="red"
+    
+})
+   
+    

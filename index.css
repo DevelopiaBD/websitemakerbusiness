@@ -33,7 +33,10 @@ body{
     margin-top: 100px;
 }
 
+.BOLDtext{
+    font-weight: bolder;
 
+}
 
 .mainCoverIMages{
     width: 100%;
@@ -41,7 +44,6 @@ body{
     height: 400px;
     overflow: hidden;
     display: flex;
-    background-color: red;
     position: relative;
     margin-top: 80px;
     margin-bottom: 50px;
@@ -84,7 +86,7 @@ body{
     transition: 10.5s;
     transform: translateX(0%);
     height: 100%;
-    animation: slideCover 30s infinite linear;
+    animation: slideCover 30s infinite 2s linear;
     /* overflow: hidden; */
 }
 
@@ -100,6 +102,30 @@ body{
     /* overflow: hidden; */
     object-fit: cover;
 }
+
+
+
+
+.firstimageCover{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstimageCover .fullImage{
+    height: 100%;
+    width: 100%;
+    margin-top: 80px;
+    
+}
+
+
+
+
+
+
 
 
 
@@ -227,12 +253,12 @@ body{
 }
 .container .webFullCover .covers .descLines{
     font-size: 17px;
-    line-height: 25px;
+    line-height: 30px;
     font-weight: 600;
     font-family: "Dancing Script", cursive;
     text-align: justify;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    color: rgb(107, 107, 107);
+    color: rgb(59, 69, 106);
 }
 .container .webFullCover .covers .webButtons{
     /* height: 50px; */
@@ -310,7 +336,7 @@ body{
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    min-height: 200px;
+    min-height: 500px;
     width: 80%;
     margin-top: 30px;
 }
@@ -344,6 +370,17 @@ body{
     width: 100%;
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
+}
+
+.linkCardsMainDiv .cardsDiv .imageDiv::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 62, 143, 0);
 }
 
 .linkCardsMainDiv .cardsDiv .imageDiv img{
@@ -386,6 +423,100 @@ body{
     justify-content: center;
     position: absolute;
 }
+
+
+
+/* POint Div....................... */
+
+.aboutOurTrust{
+    min-height: 300px;
+    width: 80%;
+    margin: 100px 0px;
+}
+
+.aboutOurTrust .pointMainDiv{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.aboutOurTrust .pointMainDiv .pointDivOne{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* background-color: aliceblue; */
+}
+.aboutOurTrust .pointMainDiv .pointDivOne .pointDiv{
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+    gap: 20px;
+}
+.aboutOurTrust .pointMainDiv .pointDivOne .pointDiv .pointDes{
+    color: rgb(59, 59, 59);
+}
+.aboutOurTrust .pointMainDiv .pointDivOne .pointDiv .pointDes .BOLDtext{
+    color: rgb(34, 22, 22);
+    font-size: 20px;
+}
+.aboutOurTrust .pointMainDiv .pointDivOne .pointDiv .point{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    height: 80px;
+    font-size: 25px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(15, 21, 42);
+}
+
+.aboutOurTrust .pointMainDiv .redPoint{
+
+    width: 500px;
+    background-color: rgb(106, 0, 255);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(112, 35, 255);
+}
+
+.aboutOurTrust .pointMainDiv .redPoint::before{
+    position: absolute;
+    content: "";
+    height: 70%;
+    width: 70%;
+    border-radius: 50%;
+    background-color: rgb(130, 28, 255);
+    
+}
+
+.aboutOurTrust .pointMainDiv .redPoint::after{
+    position: absolute;
+    content: "24/7";
+    color: white;
+    height: 40%;
+    width: 40%;
+    display: grid;
+    place-items: center;
+    font-size: 70px;
+    border-radius: 50%;
+    background-color: rgb(147, 70, 255);
+    
+}
+
+/* POint Div....................... */
+
+
+
+
+
+
+
 
 
 
@@ -691,10 +822,67 @@ body{
 
 /*  Web Cover Css */
 
+@media screen and (max-width: 1200px) {
+
+
+    
+    .aboutOurTrust .pointMainDiv{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        /* flex-direction: column;
+        justify-content: start;
+        align-items: center; */
+    }
+    
+  
+    .aboutOurTrust .pointMainDiv .pointDivOne .pointDiv .point{
+        min-width: 60px;
+        height: 60px;
+        font-size: 25px;
+    }
+    
+    .aboutOurTrust .pointMainDiv .redPoint{
+        width: 350px;
+        height: 350px;
+    }
+    
+    .aboutOurTrust .pointMainDiv .redPoint::before{
+        position: absolute;
+        content: "";
+        height: 70%;
+        width: 70%;
+        border-radius: 50%;
+        background-color: rgb(130, 28, 255);
+        
+    }
+    
+    .aboutOurTrust .pointMainDiv .redPoint::after{
+        position: absolute;
+        content: "24/7";
+        color: white;
+        height: 40%;
+        width: 40%;
+        display: grid;
+        place-items: center;
+        font-size: 70px;
+        border-radius: 50%;
+        background-color: rgb(147, 70, 255);
+        
+    }
+    
+}
+
+
+
 @media screen and (max-width: 1100px) {
     .container .webFullCover .covers{
         transform: scale(0.9);
     }
+    .designProfile .designCard{
+        width: 80%;
+    }
+  
 }
 
 
@@ -772,7 +960,7 @@ body{
     }
 
     .smDeviceParas{
-        transform: scale(0.8);
+        /* transform: scale(0.8); */
     }
 
     .container .webFullCover{
@@ -796,6 +984,25 @@ body{
     .mainCoverIMages{
         height: 300px;
     }
+
+
+
+
+
+    
+    
+    .aboutOurTrust .pointMainDiv{
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .aboutOurTrust .pointMainDiv .pointDivOne{
+        width: 80%;
+    }
+  
+  
 }
 
 
@@ -847,6 +1054,24 @@ body{
         width: 200px;
         font-size: 10px;
     }
+    
+
+
+
+.designProfile .designCard{
+    width: 90%;
+    height: 180px;
+    padding: 10px;
+}
+
+.designProfile .designCard img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
 }
 
 
@@ -918,7 +1143,34 @@ body{
 }
    
 
+
+.aboutOurTrust .pointMainDiv .pointDivOne{
+    width: 100%;
 }
+
+.aboutOurTrust .pointMainDiv .pointDivOne{
+    font-size: 14px;
+}
+
+
+.aboutOurTrust .pointMainDiv .redPoint{
+   height: 300px;
+   width: 300px;
+   margin-top: 100px;
+}
+.aboutOurTrust .pointMainDiv .redPoint::after{
+   font-size: 50px;
+}
+
+
+    
+}
+
+
+
+
+
+
 
 
 @media screen and (max-width:400px) {
@@ -939,6 +1191,16 @@ body{
     }
 }
 
+@media screen and (max-width:340px) {
+    
+    .designProfile .designCard{
+        height: 120px;
+    }
+    .designProfile .designCard img{
+        object-fit: contain;
+    }
+}
+
 @media screen and (max-width:320px) {
     
     .bodyDesc .picsAndSomeTalks .picsDiv img{
@@ -947,6 +1209,8 @@ body{
     .bodyDesc .picsAndSomeTalks .picsDiv img:nth-child(3){
         left: 30%;
     }
+
+    
        
     }
     

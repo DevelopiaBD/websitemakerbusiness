@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-
+const tagRef = "minimal";
 
 
 app.use(express.static(path.join(__dirname, '..')));
@@ -16,21 +16,31 @@ app.get("/", (req, res)=>{
 })
 
 
-app.get("/websites/portfolio1", (req, res) => {
+app.get(`/${tagRef}/website1`, (req, res) => {
     res.sendFile(path.join(__dirname, '../Portfolio1_orange_lightOrange/index.html'));
 })
 
-app.get("/websites/portfolio2", (req, res) => {
+app.get(`/${tagRef}/website2`, (req, res) => {
     res.sendFile(path.join(__dirname, '../Portfolio2_blue_light/index.html'));
 })
 
-app.get("/websites/portfolio3", (req, res) => {
+app.get(`/${tagRef}/website3`, (req, res) => {
     res.sendFile(path.join(__dirname, '../Portfolio3_vio_light/index.html'));
 })
 //  osd
 
-app.get("/websites/portfolio4", (req, res) => {
+app.get("/pro/website4", (req, res) => {
     res.sendFile(path.join(__dirname, '../Portfolio4_/index.html'));
+})
+app.get("/pro/website5", (req, res) => {
+    res.sendFile(path.join(__dirname, '../Portfolio5/index.html'));
+})
+
+
+
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, '../Others/wrongUrl.html'));
 })
 //  osd
 
