@@ -468,7 +468,8 @@ body{
     }
     .container nav .navbar .navlinks{
         position: fixed;
-        height: calc(100% - 80px);
+        height: 100%;
+        padding-top: 80px;
         bottom: 0;
         right: 0;
         width: 300px;

@@ -90,6 +90,7 @@ body{
     /* overflow: hidden; */
 }
 
+
 @keyframes slideCover {
     to{
         transform: translateX(-100%);
@@ -1181,7 +1182,16 @@ body{
     .linkCardsMainDiv .cardsDiv{
         width: 45%;
     }
-   
+    .aboutOurTrust .pointMainDiv .pointDivOne .pointDiv .pointDes .BOLDtext{
+        font-size: 17px;
+
+    }
+
+    .aboutOurTrust .pointMainDiv .pointDivOne .pointDiv .pointDes{
+        display: flex;
+        flex-direction: column;
+
+    }
 }
 
 
@@ -1194,10 +1204,20 @@ body{
 @media screen and (max-width:340px) {
     
     .designProfile .designCard{
-        height: 120px;
+        min-height: 150px;
+        width: 100%;
+        position: relative;
+        /* background-image: url(myImages/web\ cover\ 1\ svg-01.svg); */
     }
     .designProfile .designCard img{
-        object-fit: contain;
+        height: auto;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
     }
 }
 
