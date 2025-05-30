@@ -86,9 +86,13 @@ body{
     transition: 10.5s;
     transform: translateX(0%);
     height: 100%;
-    animation: slideCover 30s infinite 2s linear;
+    animation: slideCover 30s infinite 1s linear;
     /* overflow: hidden; */
 }
+/* .mainCoverIMages .imageAllDiv2{
+    animation-delay: 10s;
+    background-color: red;
+} */
 
 
 @keyframes slideCover {
